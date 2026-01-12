@@ -8,8 +8,16 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins);
+  
+  /* Brand Colors */
+  --color-brand-primary: #00a685;
+  --color-brand-dark: #037253;
+  --color-brand-light: #05CD7C;
+  --color-brand-blue: #4359D9;
+  --color-brand-purple: #A020F0;
+  --color-brand-purple-dark: #8B008B;
+  --color-brand-purple-light: #F3E8FF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +30,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
 }
