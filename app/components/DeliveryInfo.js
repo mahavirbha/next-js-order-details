@@ -13,8 +13,8 @@ export default function DeliveryInfo({ delivery }) {
         </div>
 
         <div className="text-sm">
-            <span className={`${TEXT_STYLES.highlightSemiBold} text-orange-500`}>Expected delivery date : </span>
-            <span className={`${TEXT_STYLES.highlightSemiBold} text-orange-500`}>{delivery.expectedDateRange}</span>
+            <span className={`${TEXT_STYLES.highlightSemiBold} text-orange-600`}>Expected delivery date : </span>
+            <span className={`${TEXT_STYLES.highlightSemiBold} text-orange-600`}>{delivery.expectedDateRange}</span>
         </div>
         
         <div className="border-b border-gray-200 mt-6"></div>

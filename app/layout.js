@@ -5,6 +5,9 @@ const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+  display: "swap", // Use font-display: swap to prevent render blocking
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata = {
@@ -45,6 +48,11 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to external domains for faster loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body
         className={`${poppins.variable} antialiased`}
       >

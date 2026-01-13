@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Target modern browsers - reduces bundle size by avoiding unnecessary polyfills
+  compiler: {
+    // Remove console logs in production
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  
   // Image optimization - converts images to modern formats (AVIF/WebP) for faster loading
   // Automatically optimizes images for different screen sizes
   images: {
@@ -33,6 +39,16 @@ const nextConfig = {
             // Referrer-Policy - controls how much referrer info is shared
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin'
+          }
+        ]
+      },
+      {
+        // Cache static assets for better performance and bfcache
+        source: '/(.*)\\.(js|css|jpg|jpeg|png|gif|svg|webp|avif|ico|woff|woff2|ttf)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
           }
         ]
       }

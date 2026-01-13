@@ -14,6 +14,8 @@ export default function OrderStatus({ order }) {
             height={200}
             className="w-full h-full object-contain opacity-90"
             priority
+            fetchPriority="high"
+            loading="eager"
           />
         </div>
 
@@ -24,15 +26,16 @@ export default function OrderStatus({ order }) {
             width={32}
             height={32}
             className="w-8 h-8"
+            priority
           />
         </div>
       </div>
 
       <div className="w-full flex flex-col items-center text-center justify-center space-y-4">
-        <h2 className={TEXT_STYLES.statusSubheading}>Great Job</h2>
         <h1 className={TEXT_STYLES.statusHeading}>
           Your order no. {order.orderNumber} is placed!
         </h1>
+        <h2 className={TEXT_STYLES.statusSubheading}>Great Job</h2>
         <p className={TEXT_STYLES.statusBody}>
           We will notify you once this order gets confirmed and send your
           updates thereafter
@@ -47,6 +50,9 @@ export default function OrderStatus({ order }) {
               width={128}
               height={160}
               className="w-full h-full object-contain"
+              priority
+              fetchPriority="high"
+              loading="eager"
             />
           </div>
           <p className={TEXT_STYLES.statusCardText}>

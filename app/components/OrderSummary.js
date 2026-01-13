@@ -11,10 +11,16 @@ export default function OrderSummary({ items, pricing, additionalCount }) {
       
       {/* Items List */}
       <div className="space-y-4 mb-4">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <div key={item.id} className="flex gap-4">
             <div className="w-16 h-12 border border-gray-200 rounded shrink-0 relative overflow-hidden">
-               <Image src={item.image} alt={item.name} fill className="object-cover" />
+               <Image 
+                 src={item.image} 
+                 alt={item.name} 
+                 fill 
+                 className="object-cover" 
+                 priority={index === 0}
+               />
             </div>
             <div>
               <div className={TEXT_STYLES.itemName}>{item.name}</div>

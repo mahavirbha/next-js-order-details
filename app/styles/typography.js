@@ -41,8 +41,8 @@ export const TEXT_STYLES = {
   sectionTitle: "font-bold text-base leading-6 text-black",
   
   // Body Text
-  bodyTight: "text-gray-500 text-sm font-normal leading-6 align-middle",
-  bodyRelaxed: "text-gray-500 text-sm font-normal align-middle",
+  bodyTight: "text-gray-600 text-sm font-normal leading-6 align-middle",
+  bodyRelaxed: "text-gray-600 text-sm font-normal align-middle",
   bodyMedium: "text-gray-900 text-sm font-medium align-middle",
   
 // Subtitles / Labels (e.g. "Home", "Items")
@@ -52,7 +52,7 @@ labelRegular: "font-normal text-black text-base leading-6 align-middle",
   highlightSemiBold: "font-semibold text-sm leading-6 align-middle",
 
   // Pricing Table
-  pricingContainer: "space-y-4 text-sm font-normal text-gray-600 mb-6 px-1 leading-6",
+  pricingContainer: "space-y-4 text-sm font-normal text-gray-700 mb-6 px-1 leading-6",
   pricingRow: "flex justify-between items-center",
   pricingDiscountText: "text-brand-primary font-normal",
   pricingValue: "font-medium text-gray-900 align-middle",
@@ -60,7 +60,7 @@ labelRegular: "font-normal text-black text-base leading-6 align-middle",
   // Items List
   itemName: "font-bold text-gray-900 text-sm",
   itemDescription: "font-bold text-gray-900 text-sm",
-  itemsMoreCount: "text-gray-500 text-sm mb-6 font-normal",
+  itemsMoreCount: "text-gray-600 text-sm mb-6 font-normal",
 
   // Total Amount Section
   amountPaidLabel: "font-bold text-gray-900 text-base",
@@ -70,7 +70,7 @@ labelRegular: "font-normal text-black text-base leading-6 align-middle",
   savingsBanner: "bg-brand-blue text-white rounded-b-lg p-3 pt-4 pb-6 text-center text-sm font-medium relative z-10",
 
   // Disclaimer
-  disclaimerText: "text-xs text-gray-400 leading-tight",
+  disclaimerText: "text-xs text-gray-600 leading-tight",
 
   // Status Section (White text on Green bg mostly)
   statusHeading: "font-semibold text-[20px] leading-none tracking-normal text-center align-middle",
