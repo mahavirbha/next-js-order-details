@@ -58,7 +58,7 @@ export default function OrderSummary({ items, pricing, additionalCount }) {
         </div>
       </div>
 
-      <div className="border-t border-gray-200 pt-4 flex justify-between items-center mb-4">
+      <div className="border-t border-gray-200 pt-4 flex justify-between items-center mb-6">
           <span className={TEXT_STYLES.amountPaidLabel}>Amount paid</span>
           <span className={TEXT_STYLES.amountPaidValue}>{formatPrice(pricing.amountPaid)}*</span>
       </div>
