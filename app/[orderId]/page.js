@@ -31,7 +31,7 @@ export default function OrderDetailsPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col font-sans md:h-screen md:overflow-hidden">
       <Navbar />
       
-      <main className="flex-1 flex flex-col md:flex-row w-full relative md:overflow-hidden">
+      <main className="flex-1 flex flex-col md:flex-row w-full relative md:overflow-hidden pb-[88px] md:pb-0">
         {/* Left Section - Order Status */}
 
         <div
@@ -59,8 +59,8 @@ export default function OrderDetailsPage() {
                 <div className="h-4"></div>
             </div>
             
-            {/* Sticky Action Buttons */}
-            <div className="bg-white shadow-[0_-4px_12px_rgba(0,0,0,0.08)] z-30 mt-auto relative">
+            {/* Sticky Action Buttons - Fixed on mobile, relative on desktop */}
+            <div className="fixed bottom-0 left-0 right-0 md:relative md:bottom-auto bg-white shadow-[0_-4px_12px_rgba(0,0,0,0.08)] z-30">
                 <ActionButtons />
             </div>
         </div>
