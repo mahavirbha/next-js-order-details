@@ -1,30 +1,26 @@
-"use client";
-
-import { useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 import Navbar from "../components/Navbar";
 import OrderStatus from "../components/OrderStatus";
 import DeliveryInfo from "../components/DeliveryInfo";
 import OrderSummary from "../components/OrderSummary";
 import PaymentInfo from "../components/PaymentInfo";
 import ActionButtons from "../components/ActionButtons";
-import { getOrderById } from "../data/mockData";
+import { getOrderById, getAllOrderIds } from "../data/mockData";
 
-export default function OrderDetailsPage() {
-  const params = useParams();
-  const orderId = params.orderId;
-  
+// Generate static params for all orders at build time
+export function generateStaticParams() {
+  return getAllOrderIds().map((orderId) => ({
+    orderId,
+  }));
+}
+
+export default async function OrderDetailsPage({ params }) {
+  const { orderId } = await params;
   const orderData = getOrderById(orderId);
 
   // Handle invalid order ID
   if (!orderData) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">Order Not Found</h1>
-          <p className="text-gray-600">The order you&apos;re looking for doesn&apos;t exist.</p>
-        </div>
-      </div>
-    );
+    notFound();
   }
 
   return (

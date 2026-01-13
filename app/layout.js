@@ -8,8 +8,38 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Order Placed | MedKart",
-  description: "Order status details and tracking information",
+  title: {
+    default: "Order Details | MedKart",
+    template: "%s | MedKart"
+  },
+  description: "Track your medicine orders with detailed status, delivery information, and payment details. View your order history and get real-time updates.",
+  keywords: ["order tracking", "medicine delivery", "pharmacy", "order status", "prescription tracking"],
+  authors: [{ name: "MedKart" }],
+  creator: "MedKart",
+  publisher: "MedKart",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "MedKart",
+    title: "Order Details | MedKart",
+    description: "Track your medicine orders with detailed status and delivery information",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Order Details | MedKart",
+    description: "Track your medicine orders with detailed status and delivery information",
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default function RootLayout({ children }) {
