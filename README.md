@@ -1,9 +1,63 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+A dynamic order details UI showcasing different order states with Next.js App Router and Tailwind CSS.
+
 ## Live Demo
 
 Check out the live version here: [https://next-js-order-details.vercel.app/](https://next-js-order-details.vercel.app/)
 
+## Features
+
+- **Dynamic Routes**: Navigate between 5 different order pages
+- **Responsive Design**: Responsive for various screen sizes and desktop layouts
+- **Multiple Order States**: Each route displays unique order data
+- **Modern UI**: Clean interface with gradient designs and smooth transitions
+
+## Available Routes
+
+The application supports 5 different order pages with unique data:
+
+- `/order1` - UPI payment order from Jaipur
+- `/order2` - Credit Card order from Bangalore
+- `/order3` - Debit Card order from Delhi
+- `/order4` - Wallet payment order from Hyderabad
+- `/order5` - Net Banking order from Pune
+
+Each route displays different:
+- Order numbers and status
+- Delivery addresses
+- Product items
+- Pricing details
+- Payment methods
+
+## Project Structure
+
+```
+next-js-order-details/
+├── app/
+│   ├── [orderId]/           # Dynamic route for orders
+│   │   └── page.js          # Order details page
+│   ├── components/          # Reusable UI components
+│   │   ├── ActionButtons.js
+│   │   ├── DeliveryInfo.js
+│   │   ├── Navbar.js
+│   │   ├── OrderStatus.js
+│   │   ├── OrderSummary.js
+│   │   └── PaymentInfo.js
+│   ├── data/
+│   │   └── mockData.js      # 5 different order datasets
+│   ├── styles/
+│   │   ├── buttons.js       # Button style constants
+│   │   └── typography.js    # Typography style constants
+│   ├── utils/
+│   │   └── format.js        # Utility functions
+│   ├── globals.css          # Global styles and Tailwind imports
+│   ├── layout.js            # Root layout with Poppins font
+│   └── page.js              # Home page (redirects to order1)
+├── public/                  # Static assets
+├── package.json
+└── README.md
+```
 
 ## Getting Started
 
