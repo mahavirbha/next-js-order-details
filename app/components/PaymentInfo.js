@@ -2,7 +2,7 @@ import { TEXT_STYLES } from "../styles/typography";
 
 export default function PaymentInfo({ payment }) {
     return (
-      <div className="bg-white p-4 md:p-6 pb-2 pt-6">
+      <div className="bg-white p-4 md:px-6 pb-2 pt-0">
           <h3 className={`${TEXT_STYLES.sectionTitle} mb-4`}>Paid via {payment.method}</h3>
           
           <div className="space-y-3">

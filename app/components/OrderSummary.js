@@ -4,7 +4,7 @@ import { TEXT_STYLES } from "../styles/typography";
 
 export default function OrderSummary({ items, pricing, additionalCount }) {
   return (
-    <div className="bg-white p-4 md:p-6 pt-6">
+    <div className="bg-white p-4 md:px-6 pt-0">
       <h3 className={`${TEXT_STYLES.sectionTitle} mb-4`}>Order Summary</h3>
 
       <div className={`${TEXT_STYLES.labelRegular} mb-2`}>Items</div>

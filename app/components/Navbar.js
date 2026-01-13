@@ -7,9 +7,9 @@ export default function Navbar() {
         <div className="flex items-center gap-2 font-bold text-xl text-gray-800">
           <Image src="/logo.svg" alt="MedCart Logo" width={32} height={32} className="h-8 w-auto" />
         </div>
-        <div className="text-xs text-gray-600 border-l pl-4 hidden sm:block">
-          <div className="font-semibold">Delivery to</div>
-          <div className="flex items-center gap-1">
+        <div className="text-gray-600 border-l pl-4 hidden sm:block">
+          <div className="font-medium text-sm leading-[21px] tracking-normal text-[#666666]">Delivery to</div>
+          <div className="flex items-center gap-1 font-medium text-sm leading-[21px] tracking-normal text-[#000000]">
             Bengaluru, 560102
             <Image src="/dropdown.svg" alt="Change Location" width={12} height={7} />
           </div>
@@ -29,17 +29,17 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
+      <div className="hidden md:flex items-center gap-6 text-sm leading-[21px] tracking-normal font-normal text-[#000000]">
         <button className="flex items-center gap-1 hover:text-[#60096A]">
           <Image src="/login.svg" alt="Login" width={14} height={14} /> Login
         </button>
         <button className="flex items-center gap-1 hover:text-[#60096A]">
           <Image src="/cart.svg" alt="Cart" width={16} height={16} /> Cart
         </button>
-        <button className="flex items-center gap-1 hover:text-[#60096A] font-bold">
+        <button className="flex items-center gap-1 hover:text-[#60096A]">
           <Image src="/seller.svg" alt="Seller" width={14} height={14} /> Become a seller
         </button>
-        <button className='bold'>⋮</button>
+        <button className='font-bold'>⋮</button>
       </div>
     </nav>
   );

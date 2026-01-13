@@ -31,7 +31,7 @@ export default function OrderStatus({ order }) {
       <div className="w-full flex flex-col items-center text-center justify-center space-y-4">
         <h2 className={TEXT_STYLES.statusSubheading}>Great Job</h2>
         <h1 className={TEXT_STYLES.statusHeading}>
-          Your Order No. {order.orderNumber} is Placed
+          Your order no. {order.orderNumber} is placed!
         </h1>
         <p className={TEXT_STYLES.statusBody}>
           We will notify you once this order gets confirmed and send your
