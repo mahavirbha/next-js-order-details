@@ -9,7 +9,7 @@ const nextConfig = {
   // Image optimization - converts images to modern formats (AVIF/WebP) for faster loading
   // Automatically optimizes images for different screen sizes
   images: {
-    formats: ['image/avif', 'image/webp'],
+  formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
